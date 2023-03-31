@@ -1,0 +1,57 @@
+@layer base {
+  :root {
+    --mk-white: #ffffff;
+    --mk-black: #000000;
+    --mk-grey-1: #ababab;
+    --mk-grey-2: #646464;
+    --mk-grey-3: #525252;
+    --mk-grey-4: #cdcdcd;
+
+    --mk-cta: #33cc99;
+
+    --mk-text-light-1: var(--mk-black);
+    --mk-text-light-2: var(--mk-grey-1);
+    --mk-text-light-3: var(--mk-grey-3);
+
+    --mk-text-dark-1: var(--mk-white);
+    --mk-text-dark-2: var(--mk-grey-2);
+    --mk-text-dark-3: var(--mk-grey-4);
+  }
+
+  /* semantic color variables for this project */
+  :root {
+    --color-background: var(--mk-white);
+    --color-text-1: var(--mk-text-light-1);
+    --color-text-2: var(--mk-text-light-2);
+    --color-text-3: var(--mk-text-light-3);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: var(--mk-black);
+      --color-text-1: var(--mk-text-dark-1);
+      --color-text-2: var(--mk-text-dark-2);
+      --color-text-3: var(--mk-text-dark-3);
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+  }
+
+  body {
+    min-height: 100vh;
+    /* background: var(--color-background); */
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: 'Ubuntu', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

@@ -1,0 +1,1 @@
+export { default as NavUI } from './NavUI.vue'
